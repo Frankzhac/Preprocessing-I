@@ -103,7 +103,11 @@ nav a {
 	padding-left: 20px;
 }
 
-#index-header {
+nav a:hover {
+	color: #ee4266;
+}
+
+header {
 	background-color: #1c1259;
 	border-radius: 2%;
 	display: flex;
@@ -115,11 +119,6 @@ nav a {
 		 align-items: center;
 		 margin-left: 130px;
 	 }
-}
-.header {
- display: flex;
- flex-direction: column;
- justify-content: space-between;
 }
 
 hr {
@@ -141,6 +140,19 @@ table, td, th {
 table {
   border-collapse: collapse;
   width: 50%;
+}
+
+th {
+  background-color: #ee4266;
+  color: #d5daeb;
+}
+
+td:hover {
+	background-color: white;
+}
+
+td {
+	background-color: #dadddf;
 }
 
 th, td {
@@ -176,4 +188,66 @@ footer nav a {
 
 footer nav a:hover {
 	color: #ee4266;
+}
+
+/* Portfolio starts Here! */
+
+#portfolio-header {
+	display: flex;
+	flex-direction: row;
+	font-size: 1.50rem;
+
+	 .portfolio-heading h1, p {
+	 }
+
+	 .header-img {
+			 display: flex;
+			 align-items: center;
+			 margin-left: 430px;
+	 }
+}
+
+/* Contact page starts Here! */
+
+.contact {
+  margin-top: 20px;
+}
+
+.contact p {
+  margin-bottom: 10px;
+	font-size: 1.50rem;
+	color: black;
+}
+
+input {
+	margin-left: 10px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+
+label {
+	font-size: 1.50rem;
+	color: black;
+}
+
+input[type=submit] {
+
+  background-color: white;
+	text-align: center;
+  border-radius: 8px;
+	box-shadow: none;
+  font-size: 1.25rem;
+	padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.text-msg {
+	margin-top: 10px;
+}
+
+#contact-header {
+	font-family: 'Baloo Chettan', cursive;
+	font-size: 2rem;
 }
