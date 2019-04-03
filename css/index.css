@@ -130,6 +130,27 @@ table {
 * {
   box-sizing: border-box;
 }
+/* Font family & color variable */
+/* font sizes variables */
+/* button mixin */
+.buttoned {
+  font-size: 2rem;
+  display: inline-block;
+  margin: 4px 2px;
+  margin-top: 25px;
+  padding: 10px 27px;
+  border-radius: 8px;
+  box-shadow: none;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: #1c1259;
+}
+.buttoned:hover {
+  background-color: white;
+  color: #22283A;
+}
+/* Mixin ends here! */
 html,
 body {
   height: 100%;
@@ -143,10 +164,19 @@ h2,
 h3,
 h4,
 h5 {
-  font-size: 3rem;
   color: #ee4266;
   margin-bottom: 15px;
   font-family: 'Arimo', sans-serif;
+  font-size: 2rem;
+}
+h1 {
+  font-size: 2rem;
+}
+h2,
+h3,
+h4,
+h5 {
+  font-size: 1.6rem;
 }
 p {
   line-height: 1.4;
@@ -258,12 +288,42 @@ footer nav a:hover {
 #portfolio-header {
   display: flex;
   flex-direction: row;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  border: 1px solid red;
 }
-#portfolio-header .header-img {
-  display: flex;
-  align-items: center;
-  margin-left: 430px;
+#portfolio-header .heading-img {
+  margin-left: 350px;
+}
+.top-content {
+  display: inline-block;
+  margin-left: 35px;
+  margin-top: 40px;
+  text-align: center;
+  justify-content: space-between;
+}
+.top-content h2 {
+  margin-top: 15px;
+}
+.top-content p {
+  font-size: 1.6rem;
+  color: black;
+}
+button {
+  font-size: 2rem;
+  display: inline-block;
+  margin: 4px 2px;
+  margin-top: 25px;
+  padding: 10px 27px;
+  border-radius: 8px;
+  box-shadow: none;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: #1c1259;
+}
+button:hover {
+  background-color: white;
+  color: #22283A;
 }
 /* Contact page starts Here! */
 .contact {
