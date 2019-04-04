@@ -2,86 +2,86 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-html,
-body,
-div,
-span,
+a,
+abbr,
+acronym,
+address,
 applet,
-object,
-iframe,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
+header,
+hgroup,
+html,
+i,
+iframe,
 img,
 ins,
 kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
 q,
+ruby,
 s,
 samp,
+section,
 small,
+span,
 strike,
 strong,
 sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
 summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
 time,
-mark,
-audio,
+tr,
+tt,
+u,
+ul,
+var,
 video {
   margin: 0;
   padding: 0;
@@ -115,10 +115,10 @@ blockquote,
 q {
   quotes: none;
 }
-blockquote:before,
 blockquote:after,
-q:before,
-q:after {
+blockquote:before,
+q:after,
+q:before {
   content: '';
   content: none;
 }
@@ -136,8 +136,7 @@ table {
 .buttoned {
   font-size: 2rem;
   display: inline-block;
-  margin: 4px 2px;
-  margin-top: 25px;
+  margin: 25px 2px 4px;
   padding: 10px 27px;
   border-radius: 8px;
   box-shadow: none;
@@ -151,8 +150,8 @@ table {
   color: #22283A;
 }
 /* Mixin ends here! */
-html,
-body {
+body,
+html {
   height: 100%;
   font-size: 62.5%;
   color: white;
@@ -254,8 +253,8 @@ td:hover {
 td {
   background-color: #dadddf;
 }
-th,
-td {
+td,
+th {
   padding: 15px;
 }
 .education-table,
@@ -303,8 +302,7 @@ footer nav a:hover {
 button {
   font-size: 2rem;
   display: inline-block;
-  margin: 4px 2px;
-  margin-top: 25px;
+  margin: 25px 2px 4px;
   padding: 10px 27px;
   border-radius: 8px;
   box-shadow: none;
@@ -327,8 +325,7 @@ button:hover {
   color: black;
 }
 input {
-  margin-left: 10px;
-  margin-bottom: 15px;
+  margin: 20px 0 15px 10px;
   padding-bottom: 10px;
 }
 label {
@@ -365,7 +362,19 @@ input[type=submit] {
   header {
     padding: 40px;
     text-align: left;
-    width: 100%;
+  }
+  header #index-header {
+    display: inline-block;
+    align-items: flex-start;
+    margin-left: 0;
+  }
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .navigation .logo {
+    margin-bottom: 20px;
   }
   nav {
     display: flex;
@@ -374,11 +383,9 @@ input[type=submit] {
     margin: 0 auto;
     padding: 0;
     width: 100%;
-    order: -1;
   }
   nav a {
     width: 100%;
-    display: block;
     text-align: center;
     margin-left: 0 auto;
     padding: 20px 0;
@@ -393,12 +400,20 @@ input[type=submit] {
     color: #ee4266;
   }
   .education-table,
-  .work-xp-table,
-  .skills-table {
+  .skills-table,
+  .work-xp-table {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
     width: 100%;
+    margin-left: 0;
+  }
+  textarea {
+    width: 300px;
+    height: 150px;
+  }
+  footer {
+    display: none;
   }
 }
