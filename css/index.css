@@ -360,8 +360,9 @@ input[type=submit] {
     display: none;
   }
   header {
-    padding: 40px;
+    padding: 20px;
     text-align: left;
+    margin: 0;
   }
   header #index-header {
     display: inline-block;
