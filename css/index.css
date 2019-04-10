@@ -2,86 +2,86 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-html,
-body,
-div,
-span,
+a,
+abbr,
+acronym,
+address,
 applet,
-object,
-iframe,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
+header,
+hgroup,
+html,
+i,
+iframe,
 img,
 ins,
 kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
 q,
+ruby,
 s,
 samp,
+section,
 small,
+span,
 strike,
 strong,
 sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
 summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
 time,
-mark,
-audio,
+tr,
+tt,
+u,
+ul,
+var,
 video {
   margin: 0;
   padding: 0;
@@ -115,10 +115,10 @@ blockquote,
 q {
   quotes: none;
 }
-blockquote:before,
 blockquote:after,
-q:before,
-q:after {
+blockquote:before,
+q:after,
+q:before {
   content: '';
   content: none;
 }
@@ -130,22 +130,53 @@ table {
 * {
   box-sizing: border-box;
 }
-html,
-body {
+/* Font family & color variable */
+/* font sizes variables */
+/* button mixin */
+.buttoned {
+  font-size: 2rem;
+  display: inline-block;
+  margin: 25px 2px 4px;
+  padding: 10px 27px;
+  border-radius: 8px;
+  box-shadow: none;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: #1c1259;
+}
+.buttoned:hover {
+  background-color: white;
+  color: #22283A;
+}
+/* Mixin ends here! */
+body,
+html {
   height: 100%;
   font-size: 62.5%;
+  color: white;
   font-family: 'Arimo', sans-serif;
-  background-color: #ebfffb;
+  background-color: #d5daeb;
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-size: 3rem;
-  color: #3161a3;
+  color: #ee4266;
   margin-bottom: 15px;
   font-family: 'Arimo', sans-serif;
+  font-size: 2rem;
+}
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+h2,
+h3,
+h4,
+h5 {
+  font-size: 1.6rem;
 }
 p {
   line-height: 1.4;
@@ -177,20 +208,213 @@ nav a {
   margin-right: 50px;
   padding-left: 20px;
 }
-#index-header {
-  padding: 25px;
-  background-color: #7efaff;
+nav a:hover {
+  color: #ee4266;
+}
+header {
+  background-color: #1c1259;
+  border-radius: 2%;
   display: flex;
   flex-direction: row;
   font-size: 1.5rem;
 }
-#index-header section {
+header section {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-left: 130px;
 }
-.header {
+hr {
+  border-style: none;
+  border-color: grey;
+  border-top-style: dotted;
+  border-width: 5px;
+  margin-top: 40px;
+  width: 15%;
+}
+table,
+td,
+th {
+  border: 1px solid #1c1259;
+  border-radius: 2%;
+  text-align: center;
+  color: black;
+}
+table {
+  border-collapse: collapse;
+  width: 50%;
+}
+th {
+  background-color: #ee4266;
+  color: #d5daeb;
+}
+td:hover {
+  background-color: white;
+}
+td {
+  background-color: #dadddf;
+}
+td,
+th {
+  padding: 15px;
+}
+.education-table,
+.skills-table {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+}
+footer {
+  width: 100%;
+  background: #1c1259;
+  font-size: 2rem;
+}
+footer nav {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 2%;
+  font-size: 14px;
+  margin: 50px auto;
+}
+footer nav a {
+  color: white;
+  text-decoration: none;
+}
+footer nav a:hover {
+  color: #ee4266;
+}
+/* Portfolio starts Here! */
+.top-content {
+  display: inline-block;
+  margin-left: 35px;
+  margin-top: 40px;
+  text-align: center;
+  justify-content: space-between;
+}
+.top-content h2 {
+  margin-top: 15px;
+}
+.top-content p {
+  font-size: 1.6rem;
+  color: black;
+}
+button {
+  font-size: 2rem;
+  display: inline-block;
+  margin: 25px 2px 4px;
+  padding: 10px 27px;
+  border-radius: 8px;
+  box-shadow: none;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: #1c1259;
+}
+button:hover {
+  background-color: white;
+  color: #22283A;
+}
+/* Contact page starts Here! */
+.contact {
+  margin-top: 20px;
+}
+.contact p {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: black;
+}
+input {
+  margin: 20px 0 15px 10px;
+  padding-bottom: 10px;
+}
+label {
+  font-size: 1.5rem;
+  color: black;
+}
+input[type=submit] {
+  background-color: white;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: none;
+  font-size: 1.25rem;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.text-msg {
+  margin-top: 10px;
+}
+#contact-header {
+  font-family: 'Baloo Chettan', cursive;
+  font-size: 2rem;
+}
+/* Mobile View Mode Here! */
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .header-img {
+    display: none;
+  }
+  header {
+    padding: 20px;
+    text-align: left;
+    margin: 0;
+  }
+  header #index-header {
+    display: inline-block;
+    align-items: flex-start;
+    margin-left: 0;
+  }
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .navigation .logo {
+    margin-bottom: 20px;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+  }
+  nav a {
+    width: 100%;
+    text-align: center;
+    margin-left: 0 auto;
+    padding: 20px 0;
+    font-size: 20px;
+    border-bottom: 1px solid gray;
+  }
+  .navigation nav a:first-child {
+    border-top: 1px solid gray;
+  }
+  .navigation nav a:hover {
+    background: white;
+    color: #ee4266;
+  }
+  .education-table,
+  .skills-table,
+  .work-xp-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
+    margin-left: 0;
+  }
+  textarea {
+    width: 300px;
+    height: 150px;
+  }
+  footer {
+    display: none;
+  }
 }
